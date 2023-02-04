@@ -11,8 +11,8 @@ export const StyledButton = styled.button<ButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${({ fit }) => (fit ? "100%" : "150px")};
-  height: ${({ fit }) => (fit ? "100%" : "50px")};
+  width: ${({ fit }) => (fit ? "100%" : "120px")};
+  height: ${({ fit }) => (fit ? "100%" : "45px")};
   font-size: 14px;
   border-radius: 6px;
   cursor: pointer;

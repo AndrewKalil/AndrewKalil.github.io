@@ -4,20 +4,30 @@ export const ProfileViewContainer = styled.div`
   padding: 20px;
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: 30% 40% 30%;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    overflow: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+  }
 `;
 
 export const ProfileSection = styled.section`
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const PersonalInfo = styled.div`
-  width: 100%;
-  height: 100%;
   display: flex;
   color: white;
 
@@ -25,6 +35,11 @@ export const PersonalInfo = styled.div`
     a {
       color: white;
     }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 100%;
   }
 `;
 
@@ -63,11 +78,10 @@ export const NameAndRole = styled.div`
 `;
 
 export const ListsContainer = styled.div`
-  width: 100%;
-  height: 100%;
   color: white;
   display: flex;
   flex-direction: column;
+  margin-bottom: 15px;
 
   h2 {
   }
@@ -89,6 +103,11 @@ export const ListsContainer = styled.div`
       }
     }
   }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const Description = styled.p`
@@ -96,15 +115,25 @@ export const Description = styled.p`
 `;
 
 export const ExperienceSection = styled.section`
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
 `;
 
 export const SkillSection = styled.section`
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 `;

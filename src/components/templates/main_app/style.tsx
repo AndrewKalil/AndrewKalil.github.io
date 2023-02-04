@@ -5,7 +5,12 @@ export const MainApp = styled.div`
   display: grid;
   grid-template-rows: 10% 90%;
   height: 100vh;
-  max-width: 100vw;
+  width: 100vw;
+  position: relative;
+
+  @media (max-width: 400px) {
+    height: calc(var(--vh, 1vh) * 100);
+  }
 `;
 
 export const NavbarContainer = styled.div`

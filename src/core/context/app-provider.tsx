@@ -13,6 +13,8 @@ export const AppContext = createContext({
   blogs: [] as Blog[],
   projects: [] as Project[],
   profile: {} as Profile | undefined,
+  isNavbarOpen: false,
+  setIsNavbarOpen: (value: boolean) => {},
 });
 
 export const AppProvider = ({ children }: PropsWithChildren) => {
@@ -20,6 +22,7 @@ export const AppProvider = ({ children }: PropsWithChildren) => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
   const [profile, setProfile] = useState<Profile | undefined>(undefined);
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
   useEffect(() => {
     getBlogs().then((res) => {
@@ -46,7 +49,15 @@ export const AppProvider = ({ children }: PropsWithChildren) => {
   // }, [view]);
   // 098de1a1
 
-  const value = { scrollTo, view, blogs, projects, profile };
+  const value = {
+    scrollTo,
+    view,
+    blogs,
+    projects,
+    profile,
+    isNavbarOpen,
+    setIsNavbarOpen,
+  };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

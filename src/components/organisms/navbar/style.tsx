@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FiMenu } from "react-icons/fi";
 
 type NavbarProps = {
   bgColor?: string;
@@ -8,8 +9,15 @@ export const StyledNavbar = styled.nav<NavbarProps>`
   background-color: ${({ bgColor }) => `${bgColor ? bgColor : "inherit"}`};
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: 25% 50% 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-right: 10px;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -25,6 +33,10 @@ export const LogoContainer = styled.div`
     height: 120px;
     position: absolute;
   }
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 `;
 
 export const LinksContainer = styled.div`
@@ -34,24 +46,19 @@ export const LinksContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   padding: 0 20%;
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 `;
 
-export const MediaContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 2 20%;
-`;
-
-export const Icon = styled.a`
-  height: 30px;
-  width: 30px;
-  margin-right: 10px;
+export const MenuButton = styled(FiMenu)`
+  width: 35px;
+  height: 35px;
   cursor: pointer;
+  color: white;
 
-  img {
-    width: 100%;
-    height: auto;
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 `;

@@ -19,8 +19,8 @@ export const CardContainer = styled.div`
   justify-content: center;
   overflow: hidden;
   position: relative;
-  height: 80%;
-  width: 355px;
+  height: 85%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   border-radius: 12px;
@@ -32,6 +32,16 @@ export const CardContainer = styled.div`
       transform: scale(1.2);
       transition-duration: 0.75s;
       transition-timing-function: ease-in-out;
+    }
+  }
+
+  @media (max-width: 400px) {
+    &:hover {
+      ${CardBackground} {
+        transform: unset;
+        transition-duration: unset;
+        transition-timing-function: unset;
+      }
     }
   }
 `;

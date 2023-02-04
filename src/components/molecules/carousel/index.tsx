@@ -33,6 +33,30 @@ const CustomCarousel = ({ description, dark, data }: CarouselProps) => {
           slidesPerView={3}
           navigation
           pagination={{ clickable: true }}
+          breakpoints={{
+            // when window width is >= 640px
+            300: {
+              width: 350,
+              slidesPerView: 1,
+            },
+            576: {
+              width: 576,
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 2,
+            },
+            992: {
+              width: 992,
+              slidesPerView: 3,
+            },
+            1200: {
+              width: 1200,
+              slidesPerView: 4,
+            },
+          }}
         >
           {data.map((item) => {
             const { id, title, source, description, image, url } = item;

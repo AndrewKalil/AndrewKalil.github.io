@@ -40,7 +40,7 @@ const Card = ({
     <>
       <CardContainer>
         <CardBackground image={`${image}`} />
-        <GlassFilter />
+        <GlassFilter style={{ borderRadius: "12px" }} />
         <ButtonsContainer>
           {source && (
             <Button dark action={openExternalSource}>
@@ -55,7 +55,9 @@ const Card = ({
         </ButtonsContainer>
         {children}
       </CardContainer>
-      <CardTitle dark={dark}>{title}</CardTitle>
+      <CardTitle dark={dark}>
+        {title.length > 30 ? `${title.substring(0, 30)} ...` : title}
+      </CardTitle>
     </>
   );
 };

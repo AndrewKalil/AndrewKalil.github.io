@@ -18,6 +18,7 @@ import {
   getMonthYearFormat,
   sortCollectionByDate,
 } from "../../../core/services/date";
+import Scrollbars from "react-custom-scrollbars";
 
 const ProfileScrollView = () => {
   const { profile } = useContext(AppContext);

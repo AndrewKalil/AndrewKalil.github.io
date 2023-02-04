@@ -12,44 +12,37 @@ export const CarouselContainer = styled.div`
   height: 100%;
   width: 100%;
   overflow: hidden;
-  padding: 30px 50px 0 50px;
+  padding: 30px 10px 0 10px;
   position: relative;
   display: flex;
   align-items: center;
+  @media screen and (min-width: 576px) {
+    padding: 30px 50px 0 50px;
+  }
 `;
 
 export const StyledSwiper = styled(Swiper)`
   height: 100%;
+  width: 356px;
+
+  @media screen and (min-width: 576px) {
+    width: 576px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 992px) {
+    width: 992px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 `;
 
 export const StyledSwiperSlide = styled(SwiperSlide)``;
-
-// type ClickProps = {
-//   right?: boolean;
-// };
-
-// export const PassClick = styled.span<ClickProps>`
-//   height: 40px;
-//   width: 40px;
-//   border-radius: 50%;
-//   background-color: gray;
-//   right: ${({ right }) => (right ? "75px" : "unset")};
-//   left: ${({ right }) => (!right ? "75px" : "unset")};
-//   position: absolute;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   cursor: pointer;
-//   z-index: 1;
-//   -moz-user-select: none; /* firefox */
-//   -webkit-user-select: none; /* Safari */
-//   -ms-user-select: none; /* IE*/
-//   user-select: none;
-
-//   &:hover {
-//     background-color: ${ColorPallete.primary_dark};
-//   }
-// `;
 
 type DescriptionProps = {
   color: string;
@@ -64,6 +57,13 @@ export const DescriptionContainer = styled.div<DescriptionProps>`
   justify-content: center;
 
   h3 {
-    font-size: 25px;
+    text-align: center;
+    text-justify: center;
+  }
+
+  @media screen and (min-width: 576px) {
+    h3 {
+      font-size: 25px;
+    }
   }
 `;
