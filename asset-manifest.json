@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ce723f93.css",
+    "main.js": "/static/js/main.4b2b800b.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/vikings.jpg": "/static/media/vikings.0947b4104049519a4067.jpg",
+    "static/media/logo_black.svg": "/static/media/logo_black.ac40234b5659d45b3cba.svg",
+    "static/media/logo_white.svg": "/static/media/logo_white.f7bcc8538b54901f07e1c152d8f9139e.svg",
+    "static/media/instagram.svg": "/static/media/instagram.8ff7ce92ad753b591ed4.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.c304a4148cde039a54532585f4d47b48.svg",
+    "index.html": "/index.html",
+    "static/media/github.svg": "/static/media/github.5b391347e12ca0d48a30.svg",
+    "static/media/facebook.svg": "/static/media/facebook.1d60f030f88d365627c3.svg",
+    "main.ce723f93.css.map": "/static/css/main.ce723f93.css.map",
+    "main.4b2b800b.js.map": "/static/js/main.4b2b800b.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce723f93.css",
+    "static/js/main.4b2b800b.js"
+  ]
+}
